@@ -1,0 +1,20 @@
+[general]
+# Listen port of the API where you can view monitoring results
+api_listen_port = 8080
+
+# Program execution period (minutes)
+period = 1
+
+[tg]
+enable = true
+token = ""
+chat_id = ""
+
+[el]
+json_rpcs = "http://${EL1_IP}:8545, http://${EL2_IP}:8545"
+
+# If the number of peers is less than this value, the alert will be triggered
+peer_threshold = 4
+
+# If the number of queued transactions is greater than this value, the alert will be triggered
+txpool_queued_threshold = 5000
